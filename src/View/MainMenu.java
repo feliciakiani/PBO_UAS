@@ -16,65 +16,65 @@ import javax.swing.JFrame;
  * @author Felicia
  */
 public class MainMenu {
-    
+
     JFrame frame;
-    JButton btnLogin, btnPencarian, btnExit;
+    JButton btnLogin, btnRegist, btnLihatData;
 
     public MainMenu() {
-        
+
         frame = new JFrame("Main Menu");
         frame.setSize(600, 300);
         frame.setBackground(Color.yellow);
-        
+
+//        BufferedImage image = null;
+//        image = ImageIO.read(getClass().getResource("/resources/icon.gif"));
         btnLogin = new JButton("Login Pengguna");
         btnLogin.setBounds(90, 50, 400, 40);
         btnLogin.setBackground(Color.BLACK);
         btnLogin.setForeground(Color.white);
-        btnLogin.addActionListener(new ActionListener(){
+        btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 frame.setVisible(false);
                 new LoginPenggunaMenu();
             }
         });
-        
-        
-        btnPencarian = new JButton("Registrasi Pengguna Baru");
-        btnPencarian.setBounds(90, 110, 400, 40);
-        btnPencarian.setBackground(Color.BLACK);
-        btnPencarian.setForeground(Color.white);
-        btnPencarian.addActionListener(new ActionListener(){
+
+        btnRegist = new JButton("Registrasi Pengguna Baru");
+        btnRegist.setBounds(90, 110, 400, 40);
+        btnRegist.setBackground(Color.BLACK);
+        btnRegist.setForeground(Color.white);
+        btnRegist.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 frame.setVisible(false);
                 new RegistrasiPenggunaBaruMenu();
             }
         });
-        
-        
-        btnExit = new JButton("Lihat Data Berdasarkan Kategori Dipilih");
-        btnExit.setBounds(90, 170, 400, 40);
-        btnExit.setBackground(Color.BLACK);
-        btnExit.setForeground(Color.white);
-        btnExit.addActionListener(new ActionListener(){
+
+        btnLihatData = new JButton("Lihat Data Berdasarkan Kategori Dipilih");
+        btnLihatData.setBounds(90, 170, 400, 40);
+        btnLihatData.setBackground(Color.BLACK);
+        btnLihatData.setForeground(Color.white);
+        btnLihatData.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 frame.setVisible(false);
                 new LihatDataMenu();
             }
         });
-        
+
         // Init
         frame.setLocationRelativeTo(null);
         frame.setLayout(null);
         frame.setVisible(true);
-        
+
         //Add
         frame.add(btnLogin);
-        frame.add(btnPencarian);
-        frame.add(btnExit);
-        
-        
-}
-   
+        frame.add(btnRegist);
+        frame.add(btnLihatData);
+//        frame.setIconImage(image);
+
+    }
+
 }
