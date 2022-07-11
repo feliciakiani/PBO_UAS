@@ -94,7 +94,4 @@ public class LihatData {
         
         
     }
-    public static void main(String[] args) {
-        new LihatData(1);
-    }
 }
